@@ -1,4 +1,4 @@
-package Assignment1;
+package Assign1;
 
 public class Rat {
     private Maze maze;
