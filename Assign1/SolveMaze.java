@@ -8,7 +8,7 @@ public class SolveMaze {
     Stack stack;
 
     public static void main(String[] args) {
-        new SolveMaze("C:\\Users\\I T world\\IdeaProjects\\untitled1\\DSA\\src\\Assignment1\\Maze.txt");
+        new SolveMaze("C:\\Users\\I T world\\IdeaProjects\\untitled1\\DSA\\src\\Assign1\\Maze.txt");
     }
 
     public SolveMaze(String file) {
