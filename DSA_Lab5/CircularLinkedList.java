@@ -1,8 +1,7 @@
-package Assign1.DSA_Lab5;
+package DSA_Lab5;
 
 public class CircularLinkedList {
     private Node head;
-   
 
     public void insert(Object data) {
         Node newNode = new Node(data);
@@ -17,10 +16,10 @@ public class CircularLinkedList {
             current.setNext(newNode);
             newNode.setNext(head);
         }
-     
+
     }
 
-    public void delete(Object data){
+    public void delete(Object data) {
         if (head == null) {
             throw new IndexOutOfBoundsException();
         }
@@ -33,7 +32,7 @@ public class CircularLinkedList {
                 } else {
                     previous.setNext(current.getNext());
                 }
-               
+
                 return;
             }
             previous = current;
@@ -45,19 +44,20 @@ public class CircularLinkedList {
             } else {
                 previous.setNext(head);
             }
-          
+
         }
 
-        public void print() {
-            if (head == null) {
-                throw new IndexOutOfBoundsException();
-            }
-            Node current = head;
-            while (current.getNext() != head) {
-                System.out.println(current.getData());
-                current = current.getNext();
-            }
-            System.out.println(current.getData());
+    }
+
+    public void print() {
+        if (head == null) {
+            throw new IndexOutOfBoundsException();
         }
+        Node current = head;
+        while (current.getNext() != head) {
+            System.out.println(current.getData());
+            current = current.getNext();
+        }
+        System.out.println(current.getData());
     }
 }

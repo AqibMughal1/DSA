@@ -1,4 +1,4 @@
-package Assign1.DSA_Lab5;
+package DSA_Lab5;
 
 public class Node {
     private Object data;
