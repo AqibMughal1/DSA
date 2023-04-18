@@ -1,4 +1,4 @@
-package Assign2;
+package LabAssign2;
 
 public class LinkedQueue {
     public Node front;

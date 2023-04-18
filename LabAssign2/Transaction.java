@@ -1,4 +1,4 @@
-package Assign2;
+package LabAssign2;
 import java.time.LocalDate;
 
 public class Transaction {

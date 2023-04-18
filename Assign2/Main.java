@@ -1,49 +1,40 @@
 package Assign2;
 
-import java.time.LocalDate;
-
 public class Main {
     public static void main(String[] args) {
-        int gains = 0;
-        LinkedQueue bought = new LinkedQueue();
-        LinkedQueue sold = new LinkedQueue();
+        // create a binary search tree
+        BinaryTree bst = new BinaryTree();
+        bst.insert(64);
+        bst.insert(43);
+        bst.insert(81);
+        bst.insert(20);
+        bst.insert(55);
+        bst.insert(73);
+        bst.insert(91);
 
-        Transaction t1 = new Transaction(10, 25, LocalDate.of(2022, 5, 20));
-        Transaction t2 = new Transaction(20, 20, LocalDate.of(2021, 3, 23));
-        Transaction t3 = new Transaction(60, 30, LocalDate.of(2020, 6, 29));
-        Transaction t4 = new Transaction(20, 50, LocalDate.of(2023, 8, 5));
-        
-        bought.enqueue(t1);
-        bought.enqueue(t2);
-        sold.enqueue(t3);
-        sold.enqueue(t4);
-        
-        while (!bought.isEmpty() && !sold.isEmpty()) {
-            Transaction buy = bought.front.data;
-            Transaction sell = sold.front.data;
-            
-            if (buy.price >= sell.price) {
-                System.out.println("Error: Buy price is higher than or equal to sell price.");
-                return;
-            }
-            
-            if (buy.count <= sell.count) {
-                gains += buy.count * (sell.price - buy.price);
-                sold.front.data.count -= buy.count;
-                if (sold.front.data.count == 0) {
-                    sold.dequeue();
-                }
-                bought.dequeue();
-            } else {
-                gains += sell.count * (sell.price - buy.price);
-                bought.front.data.count -= sell.count;
-                if (bought.front.data.count == 0) {
-                    bought.dequeue();
-                }
-                sold.dequeue();
-            }
-        }
-        
-        System.out.println("Total gains: " + gains);
+        // print the binary search tree
+        bst.printTree();
+
+        // test various methods on the binary search tree
+        Node parent = bst.findParent(bst.getRoot(), 20);
+        System.out.println("Parent of 20 is " + parent.data);
+
+        int level = bst.findLevel(bst.getRoot(), 91, 0);
+        System.out.println("Level of 91 is " + level);
+
+        int height = bst.findHeight(bst.getRoot());
+        System.out.println("Height of the binary search tree is " + height);
+
+        boolean isBST = bst.isBST(bst.getRoot());
+        System.out.println("Is the binary tree a BST? " + isBST);
+
+        boolean sameLevel = bst.isSameLevel(bst.getRoot(), 20, 55);
+        System.out.println("Are 20 and 55 at the same level? " + sameLevel);
+
+        int count = bst.countNodes(bst.getRoot());
+        System.out.println("The binary search tree has " + count + " nodes.");
+
     }
 }
+
+
