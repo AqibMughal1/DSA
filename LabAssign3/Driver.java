@@ -1,4 +1,4 @@
-package DSA_Lab8;
+package LabAssign3;
 
 public class Driver {
     public static void main(String[] args) {
@@ -18,6 +18,25 @@ public class Driver {
         
         int[] arr = {100,200,300,400,500,600,700,800};
         AVLTree T2 = new AVLTree(arr);
-        T2.printTree();     
+        T2.printTree();
+        
+        System.out.println();
+        System.out.println("-----------------Q2----------------");
+        Heaptree<Integer> heap = new Heaptree<>();
+
+        heap.insert(8);
+        heap.insert(4);
+        heap.insert(10);
+        heap.insert(9);
+        heap.insert(3);
+        heap.insert(5);
+
+        heap.print();
+
+        System.out.println("Removing elements from the heap:");
+        
+        System.out.println(heap.remove());
+        heap.print();
+        
     }
 }

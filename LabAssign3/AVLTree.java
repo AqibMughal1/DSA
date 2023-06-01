@@ -1,4 +1,4 @@
-package DSA_Lab8;
+package LabAssign3;
 
 public class AVLTree {
     private int key, height;
