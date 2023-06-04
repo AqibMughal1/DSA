@@ -18,7 +18,8 @@ public class Main {
             System.out.println("The value found");
         else
             System.out.println("The value NOT found");
-
+        
+        ll.Print();
         ll.searchNode(40);
         ll.searchNode(43);
         System.out.println(ll.searchNode(340));

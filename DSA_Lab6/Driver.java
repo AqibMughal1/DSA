@@ -15,5 +15,6 @@ public class Driver {
         q.dequeue();
         System.out.println("Queue Front : " + ((q.front != null) ? (q.front).key : -1));
         System.out.println("Queue Rear : " + ((q.rear != null) ? (q.rear).key : -1));
+        
     }
 }

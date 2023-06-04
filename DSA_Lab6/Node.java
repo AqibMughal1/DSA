@@ -1,11 +1,11 @@
 package DSA_Lab6;
 
 public class Node {
-    int key;
+    int data;
     Node left, right;
 
-    public Node(int item) {
-        key = item;
+    public Node(int data) {
+        this.data = data;
         left = right = null;
     }
 }
