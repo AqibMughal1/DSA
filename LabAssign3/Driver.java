@@ -9,8 +9,9 @@ public class Driver {
         tree.add(60);
         tree.add(70);
         tree.add(80);
-        System.out.println(tree);
+        //System.out.println(tree);
         tree.printTree();
+        
         System.out.println();
 
         System.out.println("Is that an AVL Tree: " +tree.isAVLTree());
