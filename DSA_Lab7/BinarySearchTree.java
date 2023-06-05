@@ -17,6 +17,7 @@ public class BinarySearchTree {
             x = x.right;
         return x;
     }
+        
 
     public void insert(Node n) {
         Node y = null;
@@ -91,7 +92,6 @@ public class BinarySearchTree {
             inorder(n.right);
         }
     }
-    
 
 
 }
