@@ -12,6 +12,11 @@ public class BinarySearchTree {
             x = x.left;
         return x;
     }
+    public Node maximum(Node x) {
+        while (x.right != null)
+            x = x.right;
+        return x;
+    }
 
     public void insert(Node n) {
         Node y = null;
@@ -86,5 +91,7 @@ public class BinarySearchTree {
             inorder(n.right);
         }
     }
+    
+
 
 }
