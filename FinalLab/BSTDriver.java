@@ -2,7 +2,7 @@ package FinalLab;
 
 import java.util.Scanner;
 
-public class Fa21BcsA073AqibQ2 {
+public class BSTDriver {
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
 

@@ -1,6 +1,6 @@
 package FinalLab;
 
-public class Fa21BcsA073AqibQ1 {
+public class QWTSDriver {
     public static void main(String[] args) {
         QueueWithTwoStacks<Integer> queue = new QueueWithTwoStacks<>();
         queue.enqueue(10);
